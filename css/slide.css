@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+/*CSSスライドショー設定
+---------------------------------------------------------------------------*/
+/*１枚目*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	35% {opacity: 1;}
+	45% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*２枚目*/
+@keyframes slide2 {
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	35% {opacity: 1;}
+	65% {opacity: 1;}
+	75% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+/*mainimg
+---------------------------------------------------------------------------*/
+/*画像ブロック*/
+#mainimg {
+	clear: left;width: 100%;margin: 0 auto;position: relative;
+}
+.slide1,.slide2 {
+	width: 100%;
+	animation-duration: 10s;	
+	animation-iteration-count:infinite;		
+	position: absolute;left:0px;top:0px;
+	animation-fill-mode: both;
+	animation-delay: 1s;
+}
+/*土台画像*/
+.slide0 {
+	position: relative;width: 100%;height: auto;
+}
+/*１枚目*/
+.slide1 {
+	animation-name: slide1;
+}
+/*２枚目*/
+.slide2 {
+	animation-name: slide2;
+}
